@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{F0734958-CFD7-4AD8-BDE4-6B628C3748AF}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Gc.Raw", "Databases\Gc.Raw\Gc.Raw.sqlproj", "{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Gc.Dw", "Databases\Gc.Dw\Gc.Dw.sqlproj", "{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20C8D4A7-7E2E-4634-824C-FF7B42A70EFD} = {F0734958-CFD7-4AD8-BDE4-6B628C3748AF}
+		{B06EA22C-14AC-4FCA-B4BF-F7AEB4E926C9} = {F0734958-CFD7-4AD8-BDE4-6B628C3748AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5A29A27-AD07-4DB0-9F74-C54E93E1AA04}
+	EndGlobalSection
+EndGlobal
