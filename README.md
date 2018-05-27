@@ -2,17 +2,17 @@
 
 This repository relates to Data Vault 2.0 methodology introduced by Daniel Linstedt. This is the try to implement the methodology and see how it works in real business area - Government Contracts
 
-# Rules
+## Rules
 The rules below are what I'm going to implement within this repository. However, it might have some discrepancies from the real methodology
 
-## Hub
+### Hub
  - Relates to the only one business entity (business key)
  - Hash Key is generated using SHA1 from business key (even though it's composite)
  
- ## Link
+### Link
  - Relationship between hubs or/and satellites
  - Hash Key is generated using SHA1 from all the business keys consisted within current Link table
  
- ## Satellite
- - Describes the hub 
- - The attribues are grouped by meaning within one Satellite (Say the contract has dates and status, so that the contract hub will have at least two satellites)
+### Satellite
+ - Describes the hub or link
+ - The attribues are grouped by meaning within one Satellite (Say, the contract has dates and status, so that the contract hub will have at least two satellites - one for status and others for dates)
