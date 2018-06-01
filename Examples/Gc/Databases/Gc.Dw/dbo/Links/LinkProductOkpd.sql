@@ -6,3 +6,7 @@
 	[OkpdHashKey] VARBINARY(20) NOT NULL,
 	[ProductHashKey] VARBINARY(20) NOT NULL
 )
+GO
+CREATE NONCLUSTERED INDEX IX_LinkProductOkpd_ProductHashKey on dbo.LinkProductOkpd(ProductHashKey)
+GO
+CREATE NONCLUSTERED INDEX IX_LinkProductOkpd_OkpdHashKey on dbo.LinkProductOkpd(OkpdHashKey)

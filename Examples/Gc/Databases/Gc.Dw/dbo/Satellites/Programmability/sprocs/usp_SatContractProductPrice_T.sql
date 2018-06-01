@@ -1,14 +1,15 @@
 ﻿CREATE PROCEDURE dbo.usp_SatContractProductPrice_T(@dataSource VARCHAR(100), @loadDate DATETIME)
 AS
 SET NOCOUNT ON;
-	MERGE dbo.SatContractProductPrice AS target
-	USING
-(
-    SELECT HASHBYTES('SHA1', SystemSource+isnull(CONVERT(NVARCHAR(MAX), result.ContractId), '')+isnull(CONVERT(NVARCHAR(MAX), result.ProductId), '')) AS HashKey,
+if objecT_id('tempdb..#SatContractProductPrice') is not null drop table #SatContractProductPrice
+
+SELECT HASHBYTES('SHA1', SystemSource+isnull(CONVERT(NVARCHAR(MAX), result.ContractId), '')+isnull(CONVERT(NVARCHAR(MAX), result.ProductId), '')) AS HashKey,
 		 @loadDate AS LoadDate,
 		 result.SystemSource,
 		 result.Price,
-		 result.Quantity
+		 result.Quantity,
+		 HASHBYTES('SHA1', isnull(CONVERT(NVARCHAR(MAX), result.Price), '')+isnull(CONVERT(NVARCHAR(MAX), result.Quantity), '')) AS HashDiff
+		 INTO #SatContractProductPrice
     FROM
 (
     SELECT DISTINCT
@@ -20,24 +21,52 @@ SET NOCOUNT ON;
     FROM [$(GcRaw)].dbo.Contract c
     WHERE c.ProductSid IS NOT NULL
 ) AS result
-) AS source(HashKey, LoadDate,SystemSource,Price,Quantity)
-	ON target.ContractProductHashKey = source.HashKey  
-			-- it's up to us how to handle updates of the name, we might insert a new raw or update existing
-	    WHEN MATCHED
+
+CREATE UNIQUE CLUSTERED INDEX [UQ_#SatContractProductPrice_HashKey_LoadDate] ON #SatContractProductPrice(HashKey,LoadDate)
+
+-- handles 
+-- 1) WHEN
+-- Key =
+-- LoadDate = 
+-- Diff <>
+-- THEN Update
+-- 2) WHEN
+-- Key or LoadDate <> 
+-- THEN Insert
+-- 3) WHEN
+-- Key =
+-- Diff = 
+-- LoadDate <>
+-- THEN DO NOTHING
+
+	MERGE dbo.SatContractProductPrice AS target
+	USING
+(
+    SELECT 
+	scpp.HashKey,
+	scpp.LoadDate,
+	scpp.SystemSource,
+	scpp.Price,
+	scpp.Quantity,
+	scpp.HashDiff
+	FROM #SatContractProductPrice scpp
+) AS source(HashKey, LoadDate,SystemSource,Price,Quantity,HashDiff)
+	ON target.ContractProductHashKey = source.HashKey AND target.LoadDate = source.LoadDate
+	    WHEN MATCHED AND target.HashDiff <> source.HashDiff
 	    THEN UPDATE SET
-					LoadDate = source.LoadDate,
 					Price = source.Price,
 					Quantity = source.Quantity
 	    WHEN NOT MATCHED
 	    THEN
 		 INSERT(ContractProductHashKey,
 			   LoadDate,
-			   SystemSource,Price,Quantity)
+			   SystemSource,Price,Quantity,HashDiff)
 		 VALUES
 (source.HashKey,
  source.LoadDate,
  source.SystemSource,
  source.Price,
- source.Quantity
+ source.Quantity,
+ source.HashDiff
 );
 	RETURN 0;
