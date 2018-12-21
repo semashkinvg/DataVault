@@ -1,0 +1,81 @@
+11.12.2018 19:41:15	This log contains information about the import schema operation into project 'AdventureWorks.SourceSystem' on computer 'DESKTOP-DB2E7FR' by user 'semashkin.vg'.
+11.12.2018 19:41:15	Import of database schema has started.
+11.12.2018 19:41:33	Gathering database credentials
+11.12.2018 19:41:33	Gathering database options
+11.12.2018 19:41:33	Gathering users
+11.12.2018 19:41:33	Gathering roles
+11.12.2018 19:41:33	Gathering application roles
+11.12.2018 19:41:33	Gathering role memberships
+11.12.2018 19:41:33	Gathering filegroups
+11.12.2018 19:41:33	Gathering full-text catalogs
+11.12.2018 19:41:33	Gathering assemblies
+11.12.2018 19:41:33	Gathering certificates
+11.12.2018 19:41:33	Gathering asymmetric keys
+11.12.2018 19:41:33	Gathering symmetric keys
+11.12.2018 19:41:33	Gathering encrypted symmetric keys
+11.12.2018 19:41:33	Gathering schemas
+11.12.2018 19:41:33	Gathering XML schema collections
+11.12.2018 19:41:33	Gathering user-defined data types
+11.12.2018 19:41:33	Gathering user-defined types
+11.12.2018 19:41:33	Gathering table types
+11.12.2018 19:41:33	Gathering unique keys for table types
+11.12.2018 19:41:33	Gathering primary keys for table types
+11.12.2018 19:41:33	Gathering indexes for table types
+11.12.2018 19:41:33	Gathering check constraints for table types
+11.12.2018 19:41:33	Gathering default constraints for table types
+11.12.2018 19:41:33	Gathering partition functions
+11.12.2018 19:41:33	Gathering partition schemes
+11.12.2018 19:41:33	Gathering functions
+11.12.2018 19:41:33	Gathering encrypted functions
+11.12.2018 19:41:33	Gathering aggregates
+11.12.2018 19:41:33	Gathering procedures
+11.12.2018 19:41:34	Gathering encrypted procedures
+11.12.2018 19:41:34	Gathering tables
+11.12.2018 19:41:34	Gathering primary keys
+11.12.2018 19:41:34	Gathering unique constraints
+11.12.2018 19:41:34	Gathering foreign keys
+11.12.2018 19:41:34	Gathering default constraints
+11.12.2018 19:41:35	Gathering check constraints
+11.12.2018 19:41:35	Gathering views
+11.12.2018 19:41:35	Gathering encrypted views
+11.12.2018 19:41:35	Gathering indexes
+11.12.2018 19:41:35	Gathering statistics
+11.12.2018 19:41:35	Gathering full-text index stoplists
+11.12.2018 19:41:35	Gathering search property lists
+11.12.2018 19:41:35	Gathering search properties
+11.12.2018 19:41:35	Gathering full-text indexes
+11.12.2018 19:41:35	Gathering column store indexes
+11.12.2018 19:41:35	Gathering spatial indexes
+11.12.2018 19:41:35	Gathering XML indexes
+11.12.2018 19:41:35	Gathering Selective XML indexes
+11.12.2018 19:41:35	Gathering encrypted triggers
+11.12.2018 19:41:35	Gathering triggers
+11.12.2018 19:41:35	Gathering encrypted and clr ddl triggers
+11.12.2018 19:41:35	Gathering ddl triggers
+11.12.2018 19:42:00	Gathering synonyms
+11.12.2018 19:42:00	Gathering defaults
+11.12.2018 19:42:00	Gathering data constraint uddt bindings
+11.12.2018 19:42:00	Gathering rules
+11.12.2018 19:42:00	Gathering data constraint uddt bindings
+11.12.2018 19:42:00	Gathering message types
+11.12.2018 19:42:00	Gathering queues
+11.12.2018 19:42:00	Gathering contracts
+11.12.2018 19:42:00	Gathering services
+11.12.2018 19:42:00	Gathering event notifications
+11.12.2018 19:42:00	Gathering remote service bindings
+11.12.2018 19:42:00	Gathering broker priorities
+11.12.2018 19:42:00	Gathering signatures
+11.12.2018 19:42:00	Gathering data compression options
+11.12.2018 19:42:00	Gathering sequence types
+11.12.2018 19:42:00	Gathering security policies
+11.12.2018 19:42:00	Gather column encryption keys
+11.12.2018 19:42:00	Gathering column master keys
+11.12.2018 19:42:00	Gathering external data sources
+11.12.2018 19:42:00	Gathering external file formats
+11.12.2018 19:42:00	Gathering external tables
+11.12.2018 19:42:00	Gathering extended properties
+11.12.2018 19:42:05	Scanning project for duplicate elements
+11.12.2018 19:42:05	Finished duplicate element processing
+11.12.2018 19:42:14	Finished importing database.
+11.12.2018 19:42:14	A summary of the import was saved to the following location: D:\Development\github\DataVault\Examples\AdventureWorks\Other\AdventureWorks.SourceSystem\Import Schema Logs\AdventureWorks.Sourc_20181211034115.log
+11.12.2018 19:42:14	Click Finish to continue...

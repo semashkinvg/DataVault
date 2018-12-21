@@ -1,0 +1,23 @@
+﻿CREATE TABLE [dbo].[Orders]
+(
+	Id int identity(1,1) primary key,
+	[SourceSalesOrderID]           INT                   NULL,
+    [RevisionNumber]         TINYINT               NULL,
+    [OrderDate]              DATETIME              NULL,
+    [DueDate]                DATETIME              NOT NULL,
+    [ShipDate]               DATETIME              NULL,
+    [Status]                 TINYINT NULL,
+    [OnlineOrderFlag]        bit					NULL,
+    [SalesOrderNumber]       nvarchar(max) null,
+    [PurchaseOrderNumber]    NVARCHAR (max)   NULL,
+    [AccountNumber]          NVARCHAR (max) NULL,
+    [CustomerID]             INT                   NULL,
+    [SalesPersonID]          INT                   NULL,
+    [TerritoryID]            INT                   NULL,
+    [BillToAddressID]        INT                   NULL,
+    [ShipToAddressID]        INT                   NULL,
+    [ShipMethodID]           INT                   NULL,
+    [CreditCardID]           INT                   NULL,
+    [CreditCardApprovalCode] VARCHAR (15)          NULL,
+    [CurrencyRateID]         INT                   NULL,
+)
