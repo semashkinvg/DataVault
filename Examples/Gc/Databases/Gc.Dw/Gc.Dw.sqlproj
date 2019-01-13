@@ -88,6 +88,8 @@
     <Build Include="dbo\Links\Programmability\sprocs\usp_LinkContractProduct_T.sql" />
     <Build Include="dbo\Satellites\SatContractProductPrice.sql" />
     <Build Include="dbo\Satellites\Programmability\sprocs\usp_SatContractProductPrice_T.sql" />
+    <Build Include="dbo\Hubs\HubOrganization.sql" />
+    <Build Include="dbo\Hubs\Programmability\sprocs\usp_HubOrganization_T.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Gc.Dw.publish.xml" />

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].ETL_HubProduct_Load(@LoadDate datetime)
+﻿CREATE PROCEDURE [dbo].ETL_SatProduct_Load(@LoadDate datetime)
 AS
 	SET NOCOUNT ON;
 

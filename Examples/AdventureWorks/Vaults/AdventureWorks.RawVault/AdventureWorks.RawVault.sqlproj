@@ -82,6 +82,17 @@
     <Build Include="Objects\Programmability\Functions\DeriveCustomerHashKey.sql" />
     <Build Include="Objects\Programmability\Sprocs\HubsLoad\ETL_HubCustomer_Load.sql" />
     <Build Include="Objects\Programmability\Sprocs\HubsLoad\ETL_HubProduct_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\LinksLoad\ETL_LinkOrderProduct_Load.sql" />
+    <Build Include="Objects\Programmability\Functions\DeriveProductHashKey.sql" />
+    <Build Include="Objects\Programmability\Functions\DeriveLinkOrderProductHashKey.sql" />
+    <Build Include="Objects\Tables\Satellites\SatProduct.sql" />
+    <Build Include="Objects\Tables\Satellites\SatProductDelivery.sql" />
+    <Build Include="Objects\Tables\Satellites\SatProductFinance.sql" />
+    <Build Include="Objects\Tables\Satellites\SatProductAttributes.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatProduct_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatProductDelivery_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_HubProductAttributes_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_HubProductFinance_Load.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="AdventureWorksSourceSystem">
