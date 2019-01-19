@@ -8,7 +8,7 @@ Examples:
  
  
 ## Adventure Works Example
-The example is intended to integrate the Adventure Works database with Adventure Works Datawarehouse passing the data through data vault methodology
+The example is intended to integrate the Adventure Works database with Adventure Works DW passing the data through data vault methodology
 
 
 ![adventure works target][adventureworkstarget]
