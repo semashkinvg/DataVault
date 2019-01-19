@@ -68,12 +68,13 @@
     <Folder Include="Objects\Programmability\Sprocs\LinksLoad" />
     <Folder Include="Objects\Programmability\Sprocs\SatsLoad" />
     <Folder Include="Objects\Programmability\Functions" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Demo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Objects\Tables\Hubs\HubCustomer.sql" />
     <Build Include="Objects\Tables\Hubs\HubOrder.sql" />
     <Build Include="Objects\Tables\Hubs\HubProduct.sql" />
-    <Build Include="Objects\Tables\Links\LinkOrderDelievery.sql" />
     <Build Include="Objects\Tables\Links\LinkOrderProduct.sql" />
     <Build Include="Objects\Tables\Satellites\SatOrderDelivery.sql" />
     <Build Include="Objects\Tables\Satellites\SatOrderFinance.sql" />
@@ -93,6 +94,13 @@
     <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatProductDelivery_Load.sql" />
     <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_HubProductAttributes_Load.sql" />
     <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_HubProductFinance_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatProductAttributes_Load.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatProductFinance_Load.sql" />
+    <Build Include="Objects\Tables\Links\LinkOrderProduct2.sql" />
+    <Build Include="Objects\Programmability\Sprocs\LinksLoad\ETL_LinkOrderProduct2_Load.sql" />
+    <Build Include="Objects\Tables\Satellites\SatLinkOrderProduct.sql" />
+    <None Include="Scripts\Demo\02. Link Indexing Strategy.sql" />
+    <Build Include="Objects\Programmability\Sprocs\SatsLoad\ETL_SatLinkOrderProduct_Load.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="AdventureWorksSourceSystem">
@@ -122,5 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AdventureWorks.RawVault.publish.xml" />
+    <None Include="Scripts\Demo\01. Latest Version From Satelites.sql" />
   </ItemGroup>
 </Project>
