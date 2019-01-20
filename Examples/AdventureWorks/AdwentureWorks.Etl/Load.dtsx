@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{43F2D227-388F-4506-96EA-6E592FA37606}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{FEDB68FA-89C2-4FC2-BD30-C03EAC5D1458}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -23,7 +23,7 @@
       DTS:ObjectName="LoadDate">
       <DTS:Property
         DTS:DataType="7"
-        DTS:Name="ParameterValue">1/19/2019 2:12:00 PM</DTS:Property>
+        DTS:Name="ParameterValue">1/21/2019 2:12:00 PM</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />

@@ -29,7 +29,7 @@ AS
 				[UnitPriceDiscount],
 				[LineTotal],
 				[ModifiedDate])
-	ON target.LinkOrderProductHashKey = source.HashKey
+	ON target.LinkOrderProductHashKey = source.HashKey AND target.LoadDate = source.LoadDate  
 		WHEN NOT MATCHED
 		THEN
 			INSERT(LinkOrderProductHashKey,

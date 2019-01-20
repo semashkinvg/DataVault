@@ -6,6 +6,7 @@ CREATE TABLE [dbo].LinkOrderProduct2
 (
 	LinkOrderProductHashKey VARBINARY(20) NOT NULL  PRIMARY KEY NONCLUSTERED,
 	LoadDate datetime NOT NULL,
+	LastSeenDate datetime NOT NULL,
 	OrderHashKey VARBINARY(20) NOT NULL,
 	ProductHashKey VARBINARY(20) NOT NULL,
 	LineNumber_ChildDependantKey INT NOT NULL,

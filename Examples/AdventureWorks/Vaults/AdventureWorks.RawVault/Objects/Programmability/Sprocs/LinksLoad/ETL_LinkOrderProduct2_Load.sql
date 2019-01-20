@@ -15,18 +15,20 @@ AS
 		inner join [$(AdventureWorksStaging)].dbo.Products p on ol.ProductId  = p.[SourceProductID]
 	) AS SOURCE(HashKey, OrderHashKey, ProductHashKey, LoadDate)
 	ON target.LinkOrderProductHashKey = source.HashKey
-		--WHEN MATCHED
-		--THEN UPDATE SET
-		--			LastSeenDate = source.LoadDate
+		WHEN MATCHED
+		THEN UPDATE SET
+					LastSeenDate = source.LoadDate
 		WHEN NOT MATCHED
 		THEN
 			INSERT(LinkOrderProductHashKey,
 				LoadDate,
+				LastSeenDate,
 				OrderHashKey,
 				ProductHashKey,
 				LineNumber_ChildDependantKey)
 			VALUES
 				(source.HashKey,
+				source.LoadDate,
 				source.LoadDate,
 				source.OrderHashKey,
 				source.ProductHashKey,
